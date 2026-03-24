@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
-const APP_PASSWORD = process.env.APP_PASSWORD ?? "fundacion2026";
+const APP_PASSWORD = process.env.APP_PASSWORD;
 
-export const config = { api: { bodyParser: false } };
 
 export async function POST(req: NextRequest) {
   // ── 1. verificar contraseña ───────────────────────────────────────────────
